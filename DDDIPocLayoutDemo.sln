@@ -7,6 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDIPocLayoutDemo.iOS", "iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDIPocLayoutDemo.Droid", "Droid\DDDIPocLayoutDemo.Droid.csproj", "{79E70207-9468-49BC-9DD2-D971DB190430}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E5ECFB27-F8FF-4B95-AA2A-3D2B98FF8A39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{6531CC7C-7AC0-4E1F-8EC8-CBAF6D88A2D9}"
+	ProjectSection(SolutionItems) = preProject
+		Screen Shot 2017-12-24 at 2.49.11 PM.png = Screen Shot 2017-12-24 at 2.49.11 PM.png
+		Screen Shot 2017-12-24 at 3.07.48 PM.png = Screen Shot 2017-12-24 at 3.07.48 PM.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
