@@ -2,7 +2,7 @@
 
 namespace DDDIPocLayoutDemo
 {
-    public partial class DDDIPocLayoutDemoPage : ContentPage
+    public partial class LoginPage : ContentPage
     {
         void onPageSizeChanged(object sender, System.EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace DDDIPocLayoutDemo
         }
 
 
-        public DDDIPocLayoutDemoPage()
+        public LoginPage()
         {
             InitializeComponent();
             this.txtPassword.Placeholder = "Password";

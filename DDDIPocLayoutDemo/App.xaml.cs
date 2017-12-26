@@ -8,7 +8,7 @@ namespace DDDIPocLayoutDemo
         {
             InitializeComponent();
 
-            MainPage = new DDDIPocLayoutDemoPage();
+            MainPage = new BookListDemo();
         }
 
         protected override void OnStart()

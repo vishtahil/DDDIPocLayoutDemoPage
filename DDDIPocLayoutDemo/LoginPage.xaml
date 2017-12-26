@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DDDIPocLayoutDemo" x:Class="DDDIPocLayoutDemo.DDDIPocLayoutDemoPage" SizeChanged="onPageSizeChanged" BackgroundColor="#e2e2e2">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DDDIPocLayoutDemo" 
+    x:Class="DDDIPocLayoutDemo.LoginPage" SizeChanged="onPageSizeChanged" BackgroundColor="#e2e2e2">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
     <StackLayout>
         <AbsoluteLayout>
-            <BoxView BackgroundColor="#2D2D2D" AbsoluteLayout.LayoutBounds="0, 0, 1, 50" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+            <BoxView BackgroundColor="#2D2D2D" 
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
             <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" Orientation="Horizontal">
                 <Label FontSize="40" Text="D" TextColor="#989898" Margin="10,0,0,0" FontAttributes="Bold">
                 </Label>
