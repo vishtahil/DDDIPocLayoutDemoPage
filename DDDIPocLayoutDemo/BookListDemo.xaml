@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions" x:Class="DDDIPocLayoutDemo.BookListDemo">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions"
+    xmlns:ui="clr-namespace:DDDIPocLayoutDemo.Layouts"
+    xmlns:viewcell="clr-namespace:DDDIPocLayoutDemo.ViewCells"
+    x:Class="DDDIPocLayoutDemo.BookListDemo">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
-    <Grid Padding="0" RowSpacing="0" ColumnSpacing="0" Margin="0">
+    <ScrollView>
+        <ListView x:Name="listView" CachingStrategy="RecycleElement"
+            SeparatorVisibility="None"  
+           HasUnevenRows="true" IsGroupingEnabled="true"
+            GroupDisplayBinding="{Binding GroupName}"
+            GroupShortNameBinding="{Binding GroupShortName}"
+
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <viewcell:BookImageCell />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!-- <ui:FlowLayout x:Name="bookListView" 
+            Padding="5" 
+            Spacing="5" 
+            BackgroundColor="Silver" IsVisible="false">
+    </ui:FlowLayout>-->
+    </ScrollView>
+    <!--<Grid Padding="0" RowSpacing="0" ColumnSpacing="0" Margin="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="200"></RowDefinition>
              <RowDefinition Height="200"></RowDefinition>
@@ -60,11 +85,11 @@
                     AbsoluteLayout.LayoutBounds="0,1,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional"
                 ></Label>
                 </AbsoluteLayout>
-            </StackLayout>
-<!--     <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}"
+            </StackLayout>-->
+    <!--     <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}"
             x:Name="imgBook" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
                 ></Image>-->
-                <!--<Label Text="$1.99" TextColor="Yellow" FontSize="19" Margin="10,0,0,0"
+    <!--<Label Text="$1.99" TextColor="Yellow" FontSize="19" Margin="10,0,0,0"
                     x:Name="priceLabel"
                     RelativeLayout.YConstraint="{ConstraintExpression
             Type=RelativeToView,
@@ -84,12 +109,10 @@
                 Factor=1,
                 Constant=-55
                 }"></Label>-->
-  
-             
-<!--</AbsoluteLayout>
+    <!--</AbsoluteLayout>
             
             </StackLayout>-->
-            <!-- <StackLayout Grid.Row="0" Grid.Column="0" >
+    <!-- <StackLayout Grid.Row="0" Grid.Column="0" >
         <RelativeLayout>
     <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}"
             x:Name="imgBook" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
@@ -119,8 +142,5 @@
 </RelativeLayout>
             
             </StackLayout>-->
-             
-        </Grid>
-
-   
+    <!-- </Grid>-->
 </ContentPage>

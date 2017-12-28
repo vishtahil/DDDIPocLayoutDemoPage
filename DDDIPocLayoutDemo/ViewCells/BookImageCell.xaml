@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DDDIPocLayoutDemo.ViewCells.BookImageCell"
+             xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions"
+             xmlns:ui="clr-namespace:DDDIPocLayoutDemo.Layouts"
+            x:Name="bookImageCell" BindingContextChanged="Handle_BindingContextChanged">
+
+     
+        <ui:FlowLayout x:Name="bookListView"  
+            Padding="5" 
+            Spacing="5" 
+          SizeChanged="Handle_SizeChanged"
+            BackgroundColor="Silver" IsVisible="true" >
+        </ui:FlowLayout>
+       
+      
+
+    <!-- <StackLayout x:Name="bookImageStackLayout" LayoutChanged="Handle_LayoutChanged">
+    <AbsoluteLayout>
+   <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}" 
+            AbsoluteLayout.LayoutBounds="0,1,-1,-1" AbsoluteLayout.LayoutFlags="PositionProportional" 
+                ></Image>
+                <Label 
+                x:Name="priceLabel"
+                TextColor="Yellow" FontSize="19"
+                  AbsoluteLayout.LayoutBounds="0,0.95,-1,-1" 
+                    Margin="10,0,0,0"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                ></Label>
+                <Label  x:Name="bookLabel"
+                    TextColor="White"
+                    FontSize="12" FontAttributes="Bold"
+                    AbsoluteLayout.LayoutBounds="0,0.65,-1,-1" Margin="10,0,0,0"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                ></Label>
+                </AbsoluteLayout>
+            </StackLayout>-->
+        
+       
+</ViewCell>

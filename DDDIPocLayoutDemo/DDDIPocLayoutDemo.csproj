@@ -36,6 +36,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Images\DDDIPocLayoutDemo.png" />
     <EmbeddedResource Include="Images\Book-icon.png" />
+    <EmbeddedResource Include="ViewCells\BookImageCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookFlowListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SimplePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -49,6 +61,19 @@
       <DependentUpon>BookListDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
+    <Compile Include="Layouts\FlowLayout.cs" />
+    <Compile Include="ViewCells\BookImageCell.xaml.cs">
+      <DependentUpon>BookImageCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BookImageViewModel.cs" />
+    <Compile Include="ViewModels\BookTypeGroupViewModel.cs" />
+    <Compile Include="BookFlowListView.xaml.cs">
+      <DependentUpon>BookFlowListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimplePage.xaml.cs">
+      <DependentUpon>SimplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimplePageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -60,6 +85,15 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.121934\lib\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="DLToolkit.Forms.Controls.FlowListView">
+      <HintPath>..\packages\DLToolkit.Forms.Controls.FlowListView.2.0.10\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0\DLToolkit.Forms.Controls.FlowListView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamvvm.Core">
+      <HintPath>..\packages\Xamvvm.Forms.1.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0\Xamvvm.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamvvm.Forms">
+      <HintPath>..\packages\Xamvvm.Forms.1.0.4\lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0\Xamvvm.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -68,6 +102,9 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="MarkupExtensions\" />
+    <Folder Include="Layouts\" />
+    <Folder Include="ViewCells\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.121934\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

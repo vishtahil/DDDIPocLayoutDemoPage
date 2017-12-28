@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="DDDIPocLayoutDemo.BookFlowListView" 
+    xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions" 
+    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
+    BackgroundColor="#e2e2e2">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <StackLayout Padding="20">
+        <flv:FlowListView FlowColumnCount="3" HasUnevenRows="false" 
+            RowHeight="120" x:Name="flwList" 
+            BackgroundColor="#e2e2e2"
+            SeparatorVisibility="None">
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <AbsoluteLayout>
+                            <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}" 
+                                AbsoluteLayout.LayoutBounds="0,1,-1,-1" 
+                                AbsoluteLayout.LayoutFlags="PositionProportional">
+                            </Image>
+                            <Label Text="$1.99" TextColor="Yellow" FontSize="14" 
+                                AbsoluteLayout.LayoutBounds="0,0.95,-1,-1" Margin="10,0,0,0" 
+                                AbsoluteLayout.LayoutFlags="PositionProportional">
+                            </Label>
+                            <Label Text="{Binding }" 
+                                TextColor="White" FontSize="12" FontAttributes="Bold" 
+                                AbsoluteLayout.LayoutBounds="0,0.65,-1,-1" Margin="10,0,0,0" 
+                                AbsoluteLayout.LayoutFlags="PositionProportional">
+                            </Label>
+                        </AbsoluteLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+        </flv:FlowListView>
+    </StackLayout>
+</ContentPage>

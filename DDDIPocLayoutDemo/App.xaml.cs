@@ -1,4 +1,6 @@
 ﻿using Xamarin.Forms;
+using DLToolkitControlsSamples;
+using DLToolkit.Forms.Controls;
 
 namespace DDDIPocLayoutDemo
 {
@@ -8,7 +10,7 @@ namespace DDDIPocLayoutDemo
         {
             InitializeComponent();
 
-            MainPage = new BookListDemo();
+            MainPage = new BookFlowListView();
         }
 
         protected override void OnStart()
