@@ -54,7 +54,7 @@ namespace DDDIPocLayoutDemo
             {
                 items.Add(new BookViewModel()
                 {
-                    Price = i,
+                    Price = i.ToString(),
                     BookName = $"{groupName} Book {i}"
                 });
             }

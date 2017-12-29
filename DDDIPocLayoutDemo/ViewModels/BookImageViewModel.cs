@@ -17,7 +17,12 @@ namespace DDDIPocLayoutDemo.ViewModels
     }
 
     public class BookViewModel{
-        public double Price { get; set; }
+        public string GroupName
+        {
+            get;
+            set;
+        }
+        public string Price { get; set; }
         public string BookName { get; set; }
     }
 }

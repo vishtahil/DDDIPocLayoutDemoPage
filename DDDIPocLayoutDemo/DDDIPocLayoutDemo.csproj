@@ -30,12 +30,7 @@
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
     <EmbeddedResource Include="LoginPage.xaml" />
-    <EmbeddedResource Include="BookListDemo.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Images\DDDIPocLayoutDemo.png" />
-    <EmbeddedResource Include="Images\Book-icon.png" />
     <EmbeddedResource Include="ViewCells\BookImageCell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -44,10 +39,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="SimplePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Images\Book-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -57,23 +49,15 @@
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BookListDemo.xaml.cs">
-      <DependentUpon>BookListDemo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MarkupExtensions\EmbeddedImage.cs" />
     <Compile Include="Layouts\FlowLayout.cs" />
     <Compile Include="ViewCells\BookImageCell.xaml.cs">
       <DependentUpon>BookImageCell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\BookImageViewModel.cs" />
-    <Compile Include="ViewModels\BookTypeGroupViewModel.cs" />
     <Compile Include="BookFlowListView.xaml.cs">
       <DependentUpon>BookFlowListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SimplePage.xaml.cs">
-      <DependentUpon>SimplePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SimplePageModel.cs" />
+    <Compile Include="ViewModels\BookGallergyPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

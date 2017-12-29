@@ -1,24 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
 using Xamarin.Forms;
 using DLToolkit.Forms.Controls;
 using DDDIPocLayoutDemo.ViewModels;
 using Xamvvm;
+using Xamarin.Forms.Internals;
+using System.Collections.ObjectModel;
 
 namespace DDDIPocLayoutDemo
 {
-    public class ItemModel{
-        public string Title
-        {
-            get;
-            set;
-        }
-    }
     public partial class BookFlowListView : ContentPage
     {
 
-
+        /// <summary>
+        /// onsize allocated
+        /// </summary>
+        /// <param name="width">Width.</param>
+        /// <param name="height">Height.</param>
         protected override void OnSizeAllocated(double width, double height)
         {
             base.OnSizeAllocated(width, height);
@@ -30,18 +29,16 @@ namespace DDDIPocLayoutDemo
 
         }
 
-        List<ItemModel> Items = new List<ItemModel>();
+        //List<ItemModel> Items = new List<ItemModel>();
         public BookFlowListView()
         {
-           
-            FlowListView.Init(); 
+
+            FlowListView.Init();
             InitializeComponent();
-            flwList.FlowItemsSource = new string[]{"vishal","amit","aniket","gmail","cnn"};
-
-           
-
+            var bookPageModel = new BookGalaryPageModel();
+            bookPageModel.ReloadData();
+            flwList.FlowItemsSource = bookPageModel.Items;
         }
-
 
     }
 }

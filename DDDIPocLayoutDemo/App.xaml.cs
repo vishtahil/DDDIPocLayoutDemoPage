@@ -1,5 +1,4 @@
 ﻿using Xamarin.Forms;
-using DLToolkitControlsSamples;
 using DLToolkit.Forms.Controls;
 
 namespace DDDIPocLayoutDemo

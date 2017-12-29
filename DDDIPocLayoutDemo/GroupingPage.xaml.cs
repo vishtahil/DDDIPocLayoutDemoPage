@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamvvm;
-using DLToolkit.Forms.Controls;
 
 namespace DLToolkitControlsSamples
 {
-    public partial class SimplePage : ContentPage, IBasePage<SimplePageModel>
+    public partial class GroupingPage : ContentPage, IBasePage<sim>
     {
-        public SimplePage()
+        public GroupingPage()
         {
-            FlowListView.Init();
             InitializeComponent();
         }
 

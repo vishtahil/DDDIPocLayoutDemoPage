@@ -1,39 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="DDDIPocLayoutDemo.BookFlowListView" 
-    xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions" 
-    xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" 
-    BackgroundColor="#e2e2e2">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DDDIPocLayoutDemo.BookFlowListView" xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView" BackgroundColor="#e2e2e2">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
-    <StackLayout Padding="20">
-        <flv:FlowListView FlowColumnCount="3" HasUnevenRows="false" 
-            RowHeight="120" x:Name="flwList" 
-            BackgroundColor="#e2e2e2"
-            SeparatorVisibility="None">
-            <flv:FlowListView.FlowColumnTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <AbsoluteLayout>
-                            <Image Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}" 
-                                AbsoluteLayout.LayoutBounds="0,1,-1,-1" 
-                                AbsoluteLayout.LayoutFlags="PositionProportional">
-                            </Image>
-                            <Label Text="$1.99" TextColor="Yellow" FontSize="14" 
-                                AbsoluteLayout.LayoutBounds="0,0.95,-1,-1" Margin="10,0,0,0" 
-                                AbsoluteLayout.LayoutFlags="PositionProportional">
-                            </Label>
-                            <Label Text="{Binding }" 
-                                TextColor="White" FontSize="12" FontAttributes="Bold" 
-                                AbsoluteLayout.LayoutBounds="0,0.65,-1,-1" Margin="10,0,0,0" 
-                                AbsoluteLayout.LayoutFlags="PositionProportional">
-                            </Label>
-                        </AbsoluteLayout>
+    <StackLayout>
+        <StackLayout>
+            <AbsoluteLayout>
+                <BoxView BackgroundColor="#2D2D2D" AbsoluteLayout.LayoutBounds="0, 0, 1, 50" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+                <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" Orientation="Horizontal">
+                    <Label FontSize="40" 
+                        Text="D" 
+                        TextColor="#989898"
+                        Margin="10,0,0,0" FontAttributes="Bold">
+                    </Label>
+                    <Label FontSize="40" 
+                        Text="DPI" 
+                        TextColor="White" 
+                        FontAttributes="Bold">
+                    </Label>
+                    <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" Padding="0,0,10,0" Spacing="10">
+                        <Label Text="Catalog" 
+                            VerticalOptions="Center"
+                            TextColor="White" 
+                            FontSize="20">
+                        </Label>
+                        <Button Text="Sign in" 
+                            TextColor="Black"
+                            WidthRequest="80" 
+                            HeightRequest="35" 
+                            VerticalOptions="Center" 
+                            BackgroundColor="#F8C33B">
+                        </Button>
                     </StackLayout>
-                </DataTemplate>
-            </flv:FlowListView.FlowColumnTemplate>
-        </flv:FlowListView>
+                </StackLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <flv:FlowListView SeparatorVisibility="None" HasUnevenRows="true"
+                    IsGroupingEnabled="true" 
+                    FlowGroupDisplayBinding="{Binding Key}"
+                    x:Name="flwList" 
+                    BackgroundColor="#e2e2e2"
+                    FlowUseAbsoluteLayoutInternally="true"
+                    FlowColumnMinWidth="50">
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <StackLayout Margin="10">
+                                <AbsoluteLayout>
+                                    <Image 
+                                        Source="{local:EmbeddedImage DDDIPocLayoutDemo.Images.Book-icon.png}"
+                                        AbsoluteLayout.LayoutBounds="0,1,-1,-1"
+                                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                                        HeightRequest="130" 
+                                        WidthRequest="120">
+                                    </Image>
+                                    <Label Text="{Binding Price}" 
+                                        TextColor="Yellow" 
+                                        FontSize="18" 
+                                        AbsoluteLayout.LayoutBounds="0,0.93,-1,-1" 
+                                        Margin="10,0,0,0" 
+                                        AbsoluteLayout.LayoutFlags="PositionProportional"
+                                        LineBreakMode="WordWrap">
+                                    </Label>
+                                    <Label Text="{Binding BookName}" TextColor="White" 
+                                        FontSize="12" FontAttributes="Bold" 
+                                        LineBreakMode="WordWrap" 
+                                        AbsoluteLayout.LayoutBounds="0,0.65,-1,-1" 
+                                        Margin="10,0,0,0" 
+                                        AbsoluteLayout.LayoutFlags="PositionProportional">
+                                    </Label>
+                                </AbsoluteLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 </ContentPage>

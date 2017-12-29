@@ -13,10 +13,18 @@ namespace DDDIPocLayoutDemo.ViewModels
         /// </summary>
         /// <param name="groupName">Group name.</param>
         /// <param name="groupShortName">Group short name.</param>
-        public BookTypeGroupViewModel(string groupName,string groupShortName)
+        public BookTypeGroupViewModel(string groupName,string groupShortName,List<BookViewModel> items)
         {
             this.GroupName = groupName;
             this.GroupShortName = groupShortName;
+            this.BookViewModels = items;
+        }
+
+        public BookTypeGroupViewModel(string groupName, string groupShortName)
+        {
+            this.GroupName = groupName;
+            this.GroupShortName = groupShortName;
+         
         }
 
         public string GroupName
@@ -26,6 +34,12 @@ namespace DDDIPocLayoutDemo.ViewModels
         }
 
         public string GroupShortName
+        {
+            get;
+            set;
+        }
+
+        public List <BookViewModel>BookViewModels
         {
             get;
             set;
