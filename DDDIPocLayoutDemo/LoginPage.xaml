@@ -10,20 +10,40 @@
             <BoxView BackgroundColor="#2D2D2D" 
             AbsoluteLayout.LayoutBounds="0, 0, 1, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
-            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" Orientation="Horizontal">
-                <Label FontSize="40" Text="D" TextColor="#989898" Margin="10,0,0,0" FontAttributes="Bold">
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" 
+                         AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" 
+                         Orientation="Horizontal">
+                <Label FontSize="40" 
+                   
+                       Text="D" 
+                       TextColor="#989898" 
+                       Margin="10,0,0,0" 
+                       FontAttributes="Bold">
                 </Label>
-                <Label FontSize="40" Text="DPI" TextColor="White" FontAttributes="Bold">
+                <Label FontSize="40" 
+                       Text="DPI" 
+                       TextColor="White" 
+                       FontAttributes="Bold">
                 </Label>
-                <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" Padding="0,0,10,0" Spacing="10">
-                    <Label Text="Catalog" VerticalOptions="Center" TextColor="White" FontSize="20">
+                <StackLayout HorizontalOptions="EndAndExpand"
+                             Orientation="Horizontal"
+                             Padding="0,0,10,0" Spacing="10">
+                    <Label Text="Catalog" 
+                           VerticalOptions="Center" 
+                           TextColor="White" 
+                           FontSize="20">
                     </Label>
-                    <Button Text="Sign in" TextColor="Black" WidthRequest="80" HeightRequest="35" VerticalOptions="Center" BackgroundColor="#F8C33B">
+                    <Button Text="Sign in"
+                            TextColor="Black" 
+                          
+                            FontSize="Default"
+                            VerticalOptions="Center"
+                            BackgroundColor="#F8C33B">
                     </Button>
                 </StackLayout>
             </StackLayout>
         </AbsoluteLayout>
-        <Grid Margin="0,5,0,0" x:Name="parentLoginGrid">
+        <Grid Margin="0,0,0,0" x:Name="parentLoginGrid" >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*">
                 </ColumnDefinition>
@@ -33,7 +53,7 @@
                 </ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*">
+                 <RowDefinition Height="*">
                 </RowDefinition>
                 <RowDefinition Height="60">
                 </RowDefinition>
