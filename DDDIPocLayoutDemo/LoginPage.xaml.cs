@@ -4,6 +4,7 @@ namespace DDDIPocLayoutDemo
 {
     public partial class LoginPage : ContentPage
     {
+        //commenting
         void onPageSizeChanged(object sender, System.EventArgs e)
         {
             if (Device.Idiom == TargetIdiom.Phone)

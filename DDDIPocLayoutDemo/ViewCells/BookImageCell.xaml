@@ -4,17 +4,17 @@
              x:Class="DDDIPocLayoutDemo.ViewCells.BookImageCell"
              xmlns:local="clr-namespace:DDDIPocLayoutDemo.MarkupExtensions"
              xmlns:ui="clr-namespace:DDDIPocLayoutDemo.Layouts"
-            x:Name="bookImageCell" BindingContextChanged="Handle_BindingContextChanged">
+            x:Name="bookImageCell" >
 
      
         <ui:FlowLayout x:Name="bookListView"  
             Padding="5" 
             Spacing="5" 
-          SizeChanged="Handle_SizeChanged"
+          
             BackgroundColor="Silver" IsVisible="true" >
         </ui:FlowLayout>
-       
-      
+
+    <!--SizeChanged="Handle_SizeChanged"-->
 
     <!-- <StackLayout x:Name="bookImageStackLayout" LayoutChanged="Handle_LayoutChanged">
     <AbsoluteLayout>
