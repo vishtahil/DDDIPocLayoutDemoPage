@@ -9,7 +9,7 @@ namespace DDDIPocLayoutDemo
         {
             InitializeComponent();
 
-            MainPage = new BookFlowListView();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
