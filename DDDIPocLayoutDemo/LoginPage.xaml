@@ -7,10 +7,39 @@
     </ContentPage.Padding>
     <StackLayout>
         <AbsoluteLayout>
-            <BoxView BackgroundColor="#2D2D2D" 
+            <BoxView BackgroundColor="Yellow" 
             AbsoluteLayout.LayoutBounds="0, 0, 1, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
-            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" 
+            <Grid 
+                AbsoluteLayout.LayoutBounds="0,0,1,50"
+                AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional"
+                BackgroundColor="#2D2D2D">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label FontSize="40" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Text="D" 
+                       TextColor="#989898" 
+                       Margin="10,0,0,0" 
+                       FontAttributes="Bold">
+                </Label>
+                <Label FontSize="40" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="38,0,0,0"
+                       Text="DPI" 
+                       TextColor="White" 
+                       FontAttributes="Bold">
+                </Label>
+            </Grid>
+            <!--<StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" 
                          AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" 
                          Orientation="Horizontal">
                 <Label FontSize="40" 
@@ -41,7 +70,7 @@
                             BackgroundColor="#F8C33B">
                     </Button>
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>-->
         </AbsoluteLayout>
         <Grid Margin="0,0,0,0" x:Name="parentLoginGrid" >
             <Grid.ColumnDefinitions>
@@ -97,7 +126,7 @@
                         </Button>
                         <Label Text="Forgot Password" FontSize="15" VerticalOptions="Center" TextColor="Black" HorizontalOptions="EndAndExpand">
                         </Label>
-                    </StackLayout>
+                    </StackLayout>  
                 </Grid>
             </Frame>
             <Grid Grid.Row="1" Grid.Column="1" Margin="0,20,0,0">
