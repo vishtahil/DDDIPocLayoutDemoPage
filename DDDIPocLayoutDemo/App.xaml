@@ -1,6 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="DDDIPocLayoutDemo.App">
-	<Application.Resources>
-		<!-- Application resource dictionary -->
-	</Application.Resources>
+    <Application.Resources>
+        <ResourceDictionary>
+            <ControlTemplate x:Key="LoginTemplate">
+                <StackLayout>
+                    <AbsoluteLayout>
+                        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, -1" Spacing="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" Orientation="Horizontal" BackgroundColor="#2d2d2d">
+                            <Label FontSize="40" Text="D" VerticalOptions="Center" TextColor="#989898" Margin="10,0,0,0" FontAttributes="Bold">
+                            </Label>
+                            <Label FontSize="40" Text="DPI" VerticalOptions="Center" TextColor="White" FontAttributes="Bold">
+                            </Label>
+                            <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" Padding="0,0,10,0" Spacing="10">
+                                <Label Text="Catalog" VerticalOptions="Center" TextColor="White" FontSize="20">
+                                </Label>
+                                <StackLayout Padding="5" Margin="10" BackgroundColor="#F8C33B">
+                                    <Label Text="Sign In" VerticalOptions="Center" TextColor="Black" FontSize="Medium">
+                                    </Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </AbsoluteLayout>
+                     <ContentPresenter ></ContentPresenter>
+                </StackLayout>
+            </ControlTemplate>
+        </ResourceDictionary>
+        <!-- Application resource dictionary -->
+    </Application.Resources>
 </Application>

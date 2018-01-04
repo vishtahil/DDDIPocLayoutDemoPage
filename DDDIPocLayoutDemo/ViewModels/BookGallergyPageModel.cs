@@ -3,6 +3,7 @@
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace DDDIPocLayoutDemo.ViewModels
 {
@@ -12,9 +13,9 @@ namespace DDDIPocLayoutDemo.ViewModels
         {
             var list = new ObservableCollection<ItemModel>();
 
-            SetItems(list,"Music");
-            SetItems(list,"Animation");
-            SetItems(list,"Adventure");
+            SetItems(list,"Music",4);
+            SetItems(list,"Animation",3);
+            SetItems(list,"Adventure",5);
 
             var sorted = list
                 .OrderBy(item => item.Price)
@@ -30,9 +31,10 @@ namespace DDDIPocLayoutDemo.ViewModels
         /// <returns>The items.</returns>
         /// <param name="items">Items.</param>
         /// <param name="groupName">Group name.</param>
-        public void  SetItems(ObservableCollection<ItemModel> items, string groupName)
+        public void  SetItems(ObservableCollection<ItemModel> items, string groupName, int count)
         {
-            for (int i = 1; i < 6; i++)
+            
+            for (int i = 1; i <  count; i++)
             {
                 items.Add(new ItemModel()
                 {
@@ -40,6 +42,7 @@ namespace DDDIPocLayoutDemo.ViewModels
                     BookName = $"{groupName} Book {i}",
                     GroupName=groupName
                 });
+
             }
         }
 

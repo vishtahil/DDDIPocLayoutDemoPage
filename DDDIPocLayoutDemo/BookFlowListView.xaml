@@ -3,38 +3,8 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
     </ContentPage.Padding>
-    <StackLayout>
-        <StackLayout>
-            <AbsoluteLayout>
-                <BoxView BackgroundColor="#2D2D2D" AbsoluteLayout.LayoutBounds="0, 0, 1, 50" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
-                <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 50" Spacing="0" AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" Orientation="Horizontal">
-                    <Label FontSize="40" 
-                        Text="D" 
-                        TextColor="#989898"
-                        Margin="10,0,0,0" FontAttributes="Bold">
-                    </Label>
-                    <Label FontSize="40" 
-                        Text="DPI" 
-                        TextColor="White" 
-                        FontAttributes="Bold">
-                    </Label>
-                    <StackLayout HorizontalOptions="EndAndExpand" Orientation="Horizontal" Padding="0,0,10,0" Spacing="10">
-                        <Label Text="Catalog" 
-                            VerticalOptions="Center"
-                            TextColor="White" 
-                            FontSize="20">
-                        </Label>
-                        <Button Text="Sign in" 
-                            TextColor="Black"
-                            WidthRequest="80" 
-                            HeightRequest="35" 
-                            VerticalOptions="Center" 
-                            BackgroundColor="#F8C33B">
-                        </Button>
-                    </StackLayout>
-                </StackLayout>
-            </AbsoluteLayout>
-        </StackLayout>
+    <ContentView ControlTemplate="{StaticResource LoginTemplate}">
+
         <ScrollView>
             <StackLayout Padding="10">
                 <flv:FlowListView SeparatorVisibility="None" HasUnevenRows="true"
@@ -77,5 +47,5 @@
                 </flv:FlowListView>
             </StackLayout>
         </ScrollView>
-    </StackLayout>
+         </ContentView>
 </ContentPage>

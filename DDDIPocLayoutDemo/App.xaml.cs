@@ -8,8 +8,9 @@ namespace DDDIPocLayoutDemo
         public App()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            MainPage = new  NavigationPage(new LoginPage());
 
-            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
